@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/b515d76414.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Library Project</title>
+  </head>
+  <body>
+    <header>
+      <div class="record"></div>
+      <i class="fas fa-book-reader"></i> LIBRARY
+    
+        <p id="totalBooks">Total Books:</p>
+      </div>
+    </header>
+    <button class="addBook btn btn-sm btn-primary">
+      <span><i class="fas fa-plus">Add New Book</i></span>
+    </button>
+    <form action="" method="POST" class="hidden">
+      <button id="closeForm">X</button>
+      <label for="title">Title:</label>
+      <input class="title" placeholder="Title" name="title" type="text" />
+      <label for="author">Author:</label>
+      <input class="author" placeholder="Author" type="text" name="author" />
+      <label for="numberOfPages">Number Of Pages:</label>
+      <input
+        class="numOfpages"
+        placeholder="Number Of Pages"
+        type="number"
+        name="numberOfPages"
+      />
+      <br />
+      <select name="Status" id="status">
+        <option value="Completed">Completed 😁</option>
+        <option value="Still Reading">Still Reading 😏</option>
+      </select>
+
+      <input
+        class="login-box"
+        type="button"
+        name="submit"
+        value="Submit"
+        id="sub-btn"
+      />
+      <div id="alerts" class="alert alert-danger" role="alert">
+        Kindly Fill all fields
+      </div>
+    </form>
+
+    <div class="container-fluid m-3 library">
+      <div class="row"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
