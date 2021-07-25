@@ -24,6 +24,8 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <!-- W3school -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/b515d76414.js"
@@ -39,44 +41,57 @@
         <p id="totalBooks">Total Books:</p>
       </div>
     </header>
-    <button class="addBook btn btn-sm btn-primary">
-      <span><i class="fas fa-plus">Add New Book</i></span>
-    </button>
-    <form action="" method="POST" class="hidden">
-      <button id="closeForm">X</button>
-      <label for="title">Title:</label>
-      <input class="title" placeholder="Title" name="title" type="text" />
-      <label for="author">Author:</label>
-      <input class="author" placeholder="Author" type="text" name="author" />
-      <label for="numberOfPages">Number Of Pages:</label>
-      <input
-        class="numOfpages"
-        placeholder="Number Of Pages"
-        type="number"
-        name="numberOfPages"
-      />
-      <br />
-      <select name="Status" id="status">
-        <option value="Completed">Completed 😁</option>
-        <option value="Still Reading">Still Reading 😏</option>
-      </select>
-
-      <input
-        class="login-box"
-        type="button"
-        name="submit"
-        value="Submit"
-        id="sub-btn"
-      />
-      <div id="alerts" class="alert alert-danger" role="alert">
-        Kindly Fill all fields
-      </div>
-    </form>
-
-    <div class="container-fluid m-3 library">
+    <button
+    onclick="document.getElementById('id01').style.display='block'"
+    class="btn btn-primary addBook" style="margin-top: 10px"
+  >
+  <span><i class="fas fa-plus">Add New Book</i></span>
+  </button>
+    <div id="container" class="container-fluid m-3 library">
       <div class="row"></div>
     </div>
 
+    <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+        <div class="w3-container" style="text-align: center; height: 500px; width: auto">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="w3-button w3-display-topright"
+            style="font-size:1.5rem; color:white"
+            >&times;</span
+          >
+          <form action="" method="POST" >
+            <label for="title">Title:</label>
+            <input class="title" placeholder="Title" name="title" type="text" />
+            <label for="author">Author:</label>
+            <input class="author" placeholder="Author" type="text" name="author" />
+            <label for="numberOfPages">Number Of Pages:</label>
+            <input
+              class="numOfpages"
+              placeholder="Number Of Pages"
+              type="number"
+              name="numberOfPages"
+            />
+            <br />
+            <select name="Status" id="status">
+              <option value="Completed">Completed 😁</option>
+              <option value="Still Reading">Still Reading 😏</option>
+            </select>
+      
+            <input
+              class="submit-btn"
+              type="button"
+              name="submit"
+              value="Submit"
+              id="sub-btn"
+            />
+            <div id="alerts" class="alert alert-danger" role="alert">
+              Kindly Fill all fields
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
