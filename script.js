@@ -4,9 +4,7 @@ let title = document.querySelector(".title");
 let authorName = document.querySelector(".author");
 let pages = document.querySelector(".numOfpages");
 let submitBtn = document.getElementById("sub-btn");
-let addBook = document.querySelector(".addBook");
 let allBooks = document.getElementById("totalBooks");
-let closed = document.querySelector("#closeForm");
 let bookStatus = document.querySelector("#status");
 let id = 0;
 let counter;
@@ -192,17 +190,3 @@ function addToLibrary(){
             document.querySelector(".row").removeChild(div);
         clearInput()
     }
-
-    addBook.addEventListener("click",()=>{document.querySelector("form").classList.remove("hidden");
-    addBook.style.display="none";
-    document.querySelector("form").classList.add("animation")})
-
-    closed.addEventListener("click",(e)=>{
-    e.preventDefault();
-    document.querySelector("form").classList.add("exit");
-    setTimeout(()=>{document.querySelector("form").classList.add("hidden");
-    document.querySelector("form").classList.remove("animation")
-    addBook.style.display="";
-    document.querySelector("form").classList.remove("exit");
-},2000)
-})
